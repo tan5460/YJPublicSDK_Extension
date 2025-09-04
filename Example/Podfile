@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'YJPublicSDK_Extension_Example' do
+  pod 'YJPublicSDK_Extension', :path => '../'
+
+  target 'YJPublicSDK_Extension_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
