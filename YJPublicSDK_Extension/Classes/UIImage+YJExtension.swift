@@ -133,6 +133,10 @@ public extension UIImage {
             let x = targetSize.width - newSize.width
             let y = targetSize.height - newSize.height
             drawRect = CGRect(x: x, y: y, width: newSize.width, height: newSize.height)
+        @unknown default:
+            // 拉伸填充整个区域，不考虑宽高比
+            newSize = targetSize
+            drawRect = CGRect(origin: .zero, size: newSize)
         }
         
         // 确保绘制区域在目标尺寸范围内
@@ -193,7 +197,7 @@ public extension UIImage {
             //调整分辨率
             resizedImage = self.resized(maxPixel: pixel)
             //判断最低质量图片是否符合要求，否则继续调整降低分辨率以保证图片质量
-            guard let lowestData = UIImageJPEGRepresentation(resizedImage, minQuality) else { return nil }
+            guard let lowestData = resizedImage.jpegData(compressionQuality: minQuality) else { return nil }
             if (lowestData.count < maxFileSize) {
                 break
             } else {
@@ -206,7 +210,7 @@ public extension UIImage {
         var compressionQuality: CGFloat = 1
         var bestData: Data?
         for _ in 0 ..< maxAttempts {
-            guard let data = UIImageJPEGRepresentation(resizedImage, compressionQuality) else { return nil }
+            guard let data = resizedImage.jpegData(compressionQuality: compressionQuality) else { return nil }
             
             // 检查是否满足大小要求
             if data.count <= maxFileSize {

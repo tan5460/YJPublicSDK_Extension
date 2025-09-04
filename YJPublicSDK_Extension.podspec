@@ -21,12 +21,12 @@ Pod::Spec.new do |s|
   Swift项目基础类扩展，方便快速构建新项目
                        DESC
 
-  s.homepage         = 'https://github.com/YJ-T/YJPublicSDK_Extension'
+  s.homepage         = 'https://github.com/tan5460/YJPublicSDK_Extension'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'YJ-T' => '313037101@qq.com' }
-  s.source           = { :git => 'https://github.com/YJ-T/YJPublicSDK_Extension.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/tan5460/YJPublicSDK_Extension.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '12.0'
   s.swift_version = "5.0"
   s.source_files = 'YJPublicSDK_Extension/Classes/**/*'
   

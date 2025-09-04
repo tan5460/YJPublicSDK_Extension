@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  YJPublicSDK_Extension
 //
-//  Created by YJ-T on 09/01/2025.
+//  Created by YJ-T on 09/04/2025.
 //  Copyright (c) 2025 YJ-T. All rights reserved.
 //
 
