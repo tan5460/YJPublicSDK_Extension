@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YJPublicSDK_Extension'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Swift项目基础类扩展'
   s.description      = <<-DESC
   Swift项目基础类扩展，方便快速构建新项目
