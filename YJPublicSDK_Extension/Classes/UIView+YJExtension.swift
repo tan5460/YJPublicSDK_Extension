@@ -29,7 +29,7 @@ public extension UIView {
             return
         }
         
-        if (frame == .zero || self.frame.width == 0 || self.frame.height == 0) {
+        if (frame == .zero && self.frame.width == 0 && self.frame.height == 0) {
             layer.mask = nil
             return
         }
