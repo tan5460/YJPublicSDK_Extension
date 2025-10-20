@@ -8,7 +8,7 @@
 import UIKit
 
 
-extension UIApplication {
+public extension UIApplication {
     
     var window: UIWindow? {
         if #available(iOS 13.0, *) {
